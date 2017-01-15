@@ -1,0 +1,115 @@
+body{
+  background-color: #8eadc5;
+}
+
+body.claire{/*IMPORTANTE: clase debe ir pegado al contenedor*/
+  background-color:  #8de1bd;
+}
+
+body.fonce{
+  background-color: #577a76;
+}
+
+button{
+  background-color: purple;
+  border: none;
+  color: #ffffff;
+  width: 95%;
+  padding: 30px;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+#gesture-zone{
+  width: 100%;
+  background-color: #7fb167;
+  margin-top: 10px;
+  min-height: 300px;
+  display: block;/*Necesario para que min y top heigh tengan sentido*/
+}
+
+#infor{
+  color: #ffffff;
+  font-size: 2em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+#gesture-zone.doubletap{
+  -webkit-animation: doublepush 2s 1;/*el "1" significa numero de veces*/
+}
+
+#gesture-zone.tap{
+  -webkit-animation: push 2s 1;/*el "1" significa numero de veces*/
+}
+
+#gesture-zone.press{
+  -webkit-animation: press 2s 1;
+}
+
+#gesture-zone.swiperigth{
+    -webkit-animation: swiperigth 3s 1;
+}
+
+#gesture-zone.swipeleft{
+    -webkit-animation: swipeleft 3s 1;
+}
+
+#gesture-zone.rotate{
+    -webkit-animation: rotate 3s 1;
+}
+
+/*ANIMACIONES NATIVAS
+Keyframe marco css para describir animación
+Prefijo webkit es para Android y IOS ms es para windows y o para opera*/
+
+@-webkit-keyframes doublepush{
+  0%, 100% {/*Inicio de animación y Final de la animación*/
+    background-color: #7fb167;
+  }
+  50%{
+    background-color: blue;
+  }
+}
+
+@-webkit-keyframes push{
+  0%, 100% {/*Inicio de animación y Final de la animación*/
+    background-color: #7fb167;
+  }
+  50%{
+    background-color: #8de1bd;
+  }
+}
+
+@-webkit-keyframes press {
+  0%, 100%{
+    background-color:  #7fba67;
+  }
+  50%{
+    background-color: #577a76;
+  }
+}
+
+@-webkit-keyframes swiperigth {
+  0%, 100% {
+    margin-left: 0%;
+  }
+  50%{
+    margin-left: 100%;
+  }
+}
+
+@-webkit-keyframes swipeleft {
+  0%,100%{
+    width: 100%;
+  }
+  50%{
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes rotate{
+  100%{
+    -webkit-transform: rotate(360deg);/*Rotarlo360 sobre su eje*/
+  }
+}
